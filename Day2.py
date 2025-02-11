@@ -100,6 +100,17 @@ print("#".join(str4))
 print(str1.upper())
 
 
+#boolean operator 
+a= 10
+b= 34
+if b>a:
+    print("b is the greatest number")
+
+else:
+    print("a is the greatest number")
+    
+
+
 
 
 
