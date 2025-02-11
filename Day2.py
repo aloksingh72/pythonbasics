@@ -99,7 +99,7 @@ print("#".join(str4))
 
 print(str1.upper())
 
-
+"""
 #boolean operator 
 a= 10
 b= 34
@@ -108,10 +108,84 @@ if b>a:
 
 else:
     print("a is the greatest number")
+"""
     
+"""
+x= 200
+print(isinstance(x,int))
+
+print((6+3)-(4-5))
+
+
+#List in python
+# it is used to multiple items in a single variable
+thisislist = ["banana","apple","orange"]
+print(thisislist)
+print(len(thisislist))
+
+
+#the list may contains different  datatypes
+list1 = ["abc",34,True,"hello world"]
+print(list1)
 
 
 
+#updating the list items
+thislist = ["apple","backcurrant","grapes","hello world"]
+thislist[3] = "mango"
+print(thislist)
+
+#updating the range of items
+thislist2 = ["apple","backcurrant","grapes","hello world"]
+thislist2[1:2] = ["watermelon","mangoes"]
+print(thislist2)
+
+thislist3 = ["apple", "banana", "cherry"]
+thislist3[1:3] = ["watermelon"]
+print(thislist3)
+
+thislist4 = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist4[1:3] = ["blackcurrant", "watermelon"]
+print(thislist4)
+
+"""
+#append the list items
+#append() method
+thislist5=["apple", "banana", "cherry", "orange"]
+thislist5.append("mangoes")
+print(thislist5)
+
+# inserting the items into the list
+#insert() method
+thislist6 = ["mango","apple","cherry"]
+thislist6.insert(2,"watermelon")
+print(thislist6)
+
+#Extend() method 
+thislist7 = ["winter","summer","rainy"]
+addseason = ["spring"]
+thislist7.extend(addseason)
+print(thislist7)
+
+#remove() method
+thislist8 = ["winter","summer","rainy"]
+thislist8.remove("winter")
+print(thislist8)
+
+#pop() method
+thislist9 = ["winter","summer","rainy","spring"]
+thislist9.pop(1)
+print(thislist9)
+
+#del() method
+thislist10 = ["winter","spring"]
+del thislist10[1]
+print(thislist10)
+
+#clear() method
+thislist11 = ["summer","rainy","spring","winter"]
+thislist11.clear()
+print(thislist11)
 
 
 
