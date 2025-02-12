@@ -95,6 +95,7 @@ print(thislist8)
 """
 
 #Case sensitive sorting
+"""
 thislist9 = ["banana","Orange","Kiwi","cherry"]
 thislist9.sort()
 print(thislist9)
@@ -102,8 +103,78 @@ print(thislist9)
 thislist10 = ["banana","Orange","Kiwi","cherry"]
 thislist10.sort(key = str.lower)
 print(thislist10)
-
+"""
 #Copy a List
+#1. using copy() method
+"""
+thislist11 = ["apple","banana","cherry"]
+copylist = thislist11.copy()
+print(copylist)
+
+"""
+#copying the items using the list() method
+thislist12 = ["apple","banana","mangoes","cherry"]
+mylist = list(thislist12)
+print(mylist)
+
+#using the slice : operator to copy the items
+
+thislist13 = ["apple","banana","mangoes","cherry"]
+mynewlist = thislist13[:]
+print(mylist)
+
+
+
+
+#Join the Lists
+#using the + operator
+list1 = ["a","b","c"]
+list2 = [1,2,3]
+
+list3 = list1+list2
+
+print(list3)
+
+
+#using the append() method
+"""
+list4 = ["a","b","c","d"]
+list5 = [1,2,3,4]
+
+for x in list5:
+	list4.append(x)
+
+print(list4)
+"""
+
+#Python Tuples
+#Tuples are used to multiple items in a single variable 
+#Tuples is a collection which is ordered and unchangeable
+#Tuples are written with round brackets.
+
+thistuple = ("apple","banana","cherry")
+print(thistuple)
+
+print(len(thistuple))
+
+#tuple with single items
+#Note:- remember the comma after the single items
+thistuple2 = ("apple",)
+print(type(thistuple2))
+
+#not a tuple
+thistuple3 = ("apple")
+print(type(thistuple3))
+
+
+
+
+
+
+
+
+
+
 
 
 
