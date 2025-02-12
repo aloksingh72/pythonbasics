@@ -151,20 +151,31 @@ print(list4)
 #Tuples are used to multiple items in a single variable 
 #Tuples is a collection which is ordered and unchangeable
 #Tuples are written with round brackets.
-
+"""
 thistuple = ("apple","banana","cherry")
 print(thistuple)
 
 print(len(thistuple))
+"""
 
 #tuple with single items
 #Note:- remember the comma after the single items
+"""
 thistuple2 = ("apple",)
 print(type(thistuple2))
+"""
 
 #not a tuple
+"""
 thistuple3 = ("apple")
 print(type(thistuple3))
+"""
+
+
+#to check the items present in the tuples
+thistuple4 = ("apple","banana","mangoes")
+if "apple" in thistuple4:
+	print("Yes it is present")
 
 
 
