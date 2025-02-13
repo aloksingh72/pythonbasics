@@ -243,12 +243,131 @@ print(set14)
 
 #Python Dictionaries
 # used to store data values in key:value pairs
+"""
 thisdic1 = {
     "brand":"Ford",
     "model":"mustang",
     "year":1984,
     "year":1984
 }
+
 print(thisdic1)
 print(type(thisdic1))
 print(thisdic1["model"])
+#also can be done with get() method 
+print(thisdic1.get("brand"))
+# keys() method return the list of all the keys
+print(thisdic1.keys())
+"""
+"""
+
+x = thisdic1.keys()
+print(x)
+
+thisdic1["color"]="white" 
+print(x)
+print(thisdic1.values())
+"""
+"""
+thisdic2 = {
+    "brand":"Ford",
+    "model":"mustang",
+    "year":1984,
+    "color":"black"
+}
+
+x = thisdic2.values()
+print(x)#before the changes
+thisdic2["color"] = "white"
+print(x)
+"""
+
+# to check the presence of the specific keys
+
+"""
+
+if "model" in thisdic2:
+    print("Model is present in this dictionary")
+else:
+    print("Model is not present in this dictionary")
+"""
+
+"""
+#update the dictionary 
+thisdict3 = {
+    "brand":"fortuner",
+    "model":"legender",
+    "year":2024
+}
+#when we use the update we have to write within the ({})
+thisdict3["year"] =2025 
+print(thisdict3)
+thisdict3.update({"model":"s3"})
+print(thisdict3)
+
+thisdict3["color"] = "white"
+print(thisdict3)
+thisdict3.update({"color":"black"})
+print(thisdict3)
+
+thisdict3.pop("model")
+print(thisdict3)
+
+thisdict3.clear()
+print(thisdict3)
+"""
+"""
+thisdic4 = {
+    "brand":"Ford",
+    "model":"mustang",
+    "year":1984,
+    "color":"black"
+}
+
+for x in thisdic4:
+    print(x)
+for y in thisdic4:
+    print(thisdic4[y])
+"""
+"""
+for x,y in thisdic4.items():
+    print(x,y)
+"""
+#copy the dictionary
+"""
+thisdict5 = {
+    "brand":"Ford",
+    "model":"mustang",
+    "year":1984,
+    "color":"black"
+}
+"""
+#using the copy() method 
+"""
+copydict = thisdict5.copy()
+print(copydict)
+"""
+#using the dict() function
+"""
+copydic2 = dict(thisdict5)
+print(copydict)
+"""
+
+#Nested dictionary :- dictionary inside another dictionary
+myfamily = {
+    "child1":{
+        "name":"alex",
+        "age":21
+    },
+    "child2":{
+        "name":"alice",
+        "age":25
+    },
+    "child3":{
+        "name":"Linus",
+        "age":26
+    }
+}
+
+#Accessing items in the nested dictionary
+print(myfamily["child2"]["name"])
