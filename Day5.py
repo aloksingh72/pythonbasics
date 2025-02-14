@@ -252,6 +252,8 @@ print(add_lambda(4,5))
 """
 #Array in Python
 # creating an array
+"""
+
 car = ["Ford","BMW","Honda","Audi","Ford"]
 x = car[1]
 car[1] = "Range Rover"
@@ -267,5 +269,41 @@ print(car)
 # remove() method:- it will remove the first occurence of the items
 car.remove("Ford")
 print(car)
+"""
 
 
+# ----------------------Python Classes and Objects----------------------
+# create the class
+"""
+class MyClass:
+    x = 5
+
+p1 = MyClass()
+# we can't directly print the value of x without making the object 
+print(p1.x)
+"""
+
+# _int()_ function :- to assign the value to object properties
+"""
+
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+p1 = Person("John",24)
+print(p1.name)
+print(p1.age)
+"""
+
+
+#__str__() function :-readable string representation of the object.
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def __str__(self):
+   		 return f"Person(Name:{self.name},Age:{self.age})" 
+		
+# creating the object
+person1 = Person("ALice",30)
+print(person1)
