@@ -19,13 +19,14 @@ numbers = [1,1,2,2,2,3,3,8,8,8,9,9]
 occurence = {
 
 }
+# without using the get method 
 for nums in numbers:
     if nums not in occurence:
       occurence[nums] = 1
     else:
        occurence[nums] += 1
 
-        
+# with using the get method  
 #    occurence[num = occurence.get(nums,0) + 1
 
 print(occurence)
