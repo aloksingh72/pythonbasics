@@ -284,7 +284,7 @@ print(p1.x)
 """
 
 # _int()_ function :- to assign the value to object properties
-"""
+
 
 class Person:
     def __init__(self,name,age):
@@ -293,10 +293,12 @@ class Person:
 p1 = Person("John",24)
 print(p1.name)
 print(p1.age)
-"""
+
 
 
 #__str__() function :-readable string representation of the object.
+
+"""
 class Person:
     def __init__(self,name,age):
         self.name = name
@@ -307,3 +309,4 @@ class Person:
 # creating the object
 person1 = Person("ALice",30)
 print(person1)
+"""
