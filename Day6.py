@@ -102,4 +102,173 @@ p.college()
 
 # four Pillars of OOPs
 # Abstraction:- Hiding the implementation details of a class and only showing the essential features to the users
+"""
+class Car:
+    def __init__(self):
+        self.acc = False
+        self.brak= False
+        self.clutch = False
+    def start(self):
+        self.clutch = True
+        self.acc = True
+        print("Car started...")
+
+car1 = Car()
+car1.start()
+"""
+
 # Encapsulation:- Wrapping data and functions into a single unit(object)
+
+# Questions:- create the caccount class  with 2 attributes - balance & account no. 
+#         create methods for debit, credit & printing the balance.
+"""
+class Account:
+    def __init__(self,bal,acc):
+        self.balance = bal
+        self.account = acc
+    # debit methods
+    def debit(self,amount):
+        self.balance -= amount
+        print("Rs.", amount, "was debited")
+        print("total balance = ",self.get_balance())
+    # credit methods
+    def credit(self , amount):
+        self.balance += amount
+        print("Rs.",amount,"was credited...")
+        print("total balance = ", self.get_balance())
+    def get_balance(self):
+        return self.balance
+
+acc1 = Account(100,123)
+acc1.debit(40)
+acc1.credit(20)
+acc1.credit(20)
+"""
+
+# del keyword
+# used to delete object properties or object itself
+# del s1.name  :- for deleting the particular member inside that object
+# del s1  for completely deleting the object
+
+"""
+class Student:
+    def __init__(self,name):
+        self.name = name
+
+s1 = Student("Mohan")
+print(s1.name)
+del s1.name
+print(s1.name)
+"""
+# private entity in object oriented programming language
+# for doing private we have to use __ (double underscore)
+# Private attributes  & methods are meant to be used only within the class and are not accessible from outside the class.
+
+"""
+class Account:
+    def __init__(self,acc_no,acc_pass):
+        self.acc_no = acc_no
+        self.__acc_pass = acc_pass
+
+    def reset_pass(self):
+        print(self.__acc_pass)
+
+acc1 = Account("12345","abc")
+print(acc1.acc_no)
+# print(acc1.__acc_pass)
+acc1.reset_pass()
+
+"""
+# Inheritance 
+#  When one class(child/derived) derives the properties & methods of another class (parent/base)
+"""
+class Car:
+    @staticmethod
+    def start():
+        print("Car started...")
+    @staticmethod
+    def stop():
+        print("Car stopped...")
+
+
+class ToyotaCar(Car):
+    def __init__(self,name):
+        self.name = name
+    
+car1 = ToyotaCar("Fortuner")
+car2  = ToyotaCar("pirus")
+
+print(car1.start())
+print(car1.name)
+"""
+# inheritance is of three types:
+                # 1. Single Inheritance
+                # 2.Multi-level Inheritance
+                # 3.Multiple Inheritance
+# example of multi-level inheritance 
+"""
+class Car:
+    @staticmethod
+    def start():
+        print("Car started...")
+    @staticmethod
+    def stop():
+        print("Car stopped...")
+
+
+class ToyotaCar(Car):
+    def __init__(self,brand):
+        self.brand = brand
+    
+class Fortuner(ToyotaCar):
+    def __init__(self,type):
+        self.type = type
+
+car1 = Fortuner("diesel")
+car1.start()
+
+"""
+# example of mutiple inheritance
+"""
+class A:
+    varA = "Welcome to class A"
+
+class B:
+    varB = "welcome to class B"
+
+class C(A,B):
+    varC = "Welcome to class C"
+
+c1 = C()
+print(c1.varC)
+print(c1.varA)
+print(c1.varB)
+
+"""
+
+# Super method 
+# is used to access methods of the parent class.
+
+class Car:
+
+    def __init__(self,type):
+        self.type = type
+    
+    @staticmethod
+    def start():
+        print("Car started...")
+    @staticmethod
+    def stop():
+        print("Car stopped...")
+
+
+class ToyotaCar(Car):
+    def __init__(self,name,type):
+        super().__init__(type)
+        self.name = name
+        super().start()
+    
+
+
+car1 = ToyotaCar("diesel","electric")
+print(car1.type)
