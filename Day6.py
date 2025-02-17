@@ -248,7 +248,7 @@ print(c1.varB)
 
 # Super method 
 # is used to access methods of the parent class.
-
+"""
 class Car:
 
     def __init__(self,type):
@@ -272,3 +272,37 @@ class ToyotaCar(Car):
 
 car1 = ToyotaCar("diesel","electric")
 print(car1.type)
+"""
+# classmethod decorator 
+# have to study
+
+#@property method
+# makes a  method behaves like an attribute 
+
+"""
+class Student:
+    def __init__(self,phy,chem,math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+
+    @property
+    def percentage(self):
+        return str((self.phy +self.chem + self.math) / 3) +"%"
+    
+stu1 = Student(98,78,56)
+print(stu1.percentage)
+
+stu1.phy = 75
+print(stu1.percentage)
+"""
+
+#Polymorphism   
+# Operator overloading 
+# when the smame 
+print(1+2)
+print(type(1))
+print("alok"+"singh")
+print(type("alok"))
+print([1,2,3]+[7,8,9,])
+print(type([1,2,3,5]))
