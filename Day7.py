@@ -1,3 +1,4 @@
+# Dated->18/02/2025/Tuesday
 # Python Polymorphism
 # The word "polymorphism" means "many forms", and in programming it refers to methods/functions/operators with the same name that can be executed on many objects or classes.
 
@@ -231,4 +232,129 @@ print(z)
 """
 # -----> Python PIP
 # PIP is a package manager for Python packages
+# It install the packages inside the python directory
 
+
+
+# ----> Exception Handling----
+""""
+try:
+    print(x)
+except:
+    print("this will catch an excception")
+"""
+
+"""
+
+try:
+    x=9
+    print(x/0)
+
+except NameError:
+    print("variable x is not defined")
+except:
+    print("this will catch an exception")
+"""
+# if no error is raised then else block will be executed
+
+"""
+
+try:
+    print("hello")
+except:
+    print("this will catch an exception")
+else:
+    print("nothing went wrong")
+"""
+
+# finally block will be executed wheather the exception occur or not
+"""
+try:
+    print(x)
+except:
+    print("this will catch an exception"
+          )
+finally:
+    print("this is finally block")
+"""
+
+"""
+x = -1
+if x<0:
+    raise Exception("x can't be negative")
+"""
+
+"""
+x = "hello"
+if not type(x) is int:
+    raise TypeError("x must be an integer ")
+"""
+
+"""
+price = 59000
+txt = f"The price is {price:,} dollars"
+print(txt)
+"""
+
+
+# Decorators: 
+# A decorator in Python is a function that modifies the behavior of another function without changing its code.
+#  It is commonly used for logging, authentication, and more.
+
+# Example1
+"""
+
+def my_decorator(func):
+    def wrapper():
+        print("before the function runs")
+        func()
+        print("after the functions runs")
+    return wrapper
+
+@my_decorator # using the decorator function
+def say_hello():
+    print("hello world!")
+
+
+say_hello()
+"""
+# Example 2
+"""
+def greet_decorator(func):
+    def wrapper(name):
+        print("Greeting starts...")
+        func(name)
+        print("Greeting ends...")
+    return wrapper
+
+
+@greet_decorator
+def greet(name):
+    print(f"Hello,{name}!")
+
+greet("Alok Singh")
+
+"""
+# Generators: 
+# A generator is a special type of function that returns values one at a time using the yield keyword instead of returning everything at once.
+# This helps in saving memory when dealing with large data.
+"""
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+
+gen = my_generator()
+
+print(next(gen))
+print(next(gen))
+print(next(gen))
+"""
+
+def even_numbers(n):
+    for  i in range(2 ,n+1,2):
+        yield i 
+    
+gen = even_numbers(10)
+for nums in gen:
+    print(nums)    
