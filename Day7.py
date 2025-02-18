@@ -77,7 +77,7 @@ def myfunc5():
 print(myfunc5())
 """
 
-# Module keywords
+# ----------------------------->Module keywords
 """
 import platform
 
@@ -101,10 +101,134 @@ print(x)
 """
 
 # Using the dir() Function
+"""
 import platform
 x = dir(platform)
 y = platform.processor()
 z =platform.uname()
 print(y)
 print(z)
+"""
+"""
+import datetime
+x = datetime.datetime.now()
+print(x)
+"""
+# strftime is used to format dates in readable format 
+"""
+import datetime
+x = datetime.datetime(2018, 6, 1)
+print(x.strftime("%B"))
+
+"""
+# ---------------------------------->Python Maths
+"""
+ 
+x = (3,6,8)
+print(max(x))
+
+a = abs(-34.56)
+print(a)
+
+# power functions
+res = pow(4,3)
+print(res)
+
+import math
+x = math.pi
+print(x)
+
+"""
+
+# ----------------->Python JSON
+# JSON is a syntax for storing and exchanging data.
+# JSON is text, written with JavaScript object notation.
+
+
+# ----converting form json to python string
+# we use loads method
+"""
+import json
+# some JSON:
+x = '{"name":"Alex", "age":30, "city":"Mumbai"}'
+
+# parsing the x 
+y =json.loads(x)
+
+print(y["name"])
+print(y["age"])
+print(y["city"])
+"""
+
+# -----> converting from python to json format
+# we use the dumps method
+"""
+
+import json
+# a python object
+x = {
+    "name": "Alex",
+    "branch":"C.S.E",
+    "year":2025
+
+}
+# convert from pytho to json 
+y = json.dumps(x)
+# the result is json string
+print(y)
+""" 
+
+""""
+
+import json
+
+print(json.dumps({"name": "John", "age": 30}))
+print(json.dumps(["apple", "bananas"]))
+print(json.dumps(("apple", "bananas")))
+print(json.dumps("hello"))
+print(json.dumps(42))
+print(json.dumps(31.76))
+print(json.dumps(True))
+print(json.dumps(False))
+print(json.dumps(None))
+"""
+
+"""
+import json
+
+x = {
+  "name": "John",
+  "age": 30,
+  "married": True,
+  "divorced": False,
+  "children": ("Ann","Billy"),
+  "pets": None,
+  "cars": [
+    {"model": "BMW 230", "mpg": 27.5},
+    {"model": "Ford Edge", "mpg": 24.1}
+  ]
+}
+
+print(json.dumps(x, indent=2))
+"""
+#-------> RegEx Module
+
+"""
+import re
+txt = "This is a new  India"
+x = re.search("^This.*India$",txt)
+
+txt = "The rain in Spain"
+y = re.findall("ai", txt)
+
+txt = "The rain in Spain"
+z = re.search("\s", txt)
+
+print("The first white-space character is located in position:", x.start())
+print(x)
+print(y)
+print(z)
+"""
+# -----> Python PIP
+# PIP is a package manager for Python packages
 
