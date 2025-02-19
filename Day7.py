@@ -272,8 +272,7 @@ else:
 try:
     print(x)
 except:
-    print("this will catch an exception"
-          )
+    print("this will catch an exception")
 finally:
     print("this is finally block")
 """
