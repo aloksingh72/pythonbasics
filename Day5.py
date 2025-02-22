@@ -1,4 +1,4 @@
-# Python if else 
+# Python if else loop
 """
 a= 23
 b = 67
