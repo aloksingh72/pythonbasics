@@ -1,4 +1,4 @@
-# Python if else loop
+# Python if else loop 
 """
 a= 23
 b = 67
@@ -30,7 +30,7 @@ else:
 """
 
 
-#Shorthand if statement
+#Shorthand if statement in python
 """
 a = 34
 b = 86
