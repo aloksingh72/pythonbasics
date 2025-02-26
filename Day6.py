@@ -100,7 +100,7 @@ p.college()
 
 """
 
-# four Pillars of OOPs
+# four Pillars of OOPs:-
 # Abstraction:- Hiding the implementation details of a class and only showing the essential features to the users
 """
 class Car:
@@ -299,7 +299,7 @@ print(stu1.percentage)
 
 #Polymorphism   
 # Operator overloading 
-# when the smame 
+# same operator different operations
 print(1+2)
 print(type(1))
 print("alok"+"singh")
